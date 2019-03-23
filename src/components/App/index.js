@@ -18,7 +18,10 @@ const StyledSlider = styled(Slider)`
 
 class App extends React.Component {
   render() {
+    let sliderRef;
+
     const settings = {
+      onEdge: e => e === "left" && sliderRef.slickGoTo(0),
       slidesToShow: 1.3,
       slidesToScroll: 1,
       initialSlide: 0,
@@ -26,14 +29,31 @@ class App extends React.Component {
       dots: false,
     };
 
+    const prev = () => {
+      sliderRef.slickPrev();
+    };
+
+    const next = () => {
+      sliderRef.slickNext();
+    };
+
     return (
-      <div>
-        <StyledSlider {...settings}>
+      <>
+        <StyledSlider {...settings} ref={thisRef => (sliderRef = thisRef)}>
           {slides.map((slide, index) => (
             <Slide key={index} tall={slide === "tall"} />
           ))}
         </StyledSlider>
-      </div>
+
+        <div style={{ textAlign: "center" }}>
+          <button className="button" onClick={prev}>
+            Previous
+          </button>
+          <button className="button" onClick={next}>
+            Next
+          </button>
+        </div>
+      </>
     );
   }
 }
