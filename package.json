@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-lottie": "^1.2.3",
     "react-scripts": "2.1.8",
     "react-slick": "^0.23.2",
     "react-spring": "^8.0.18",
-    "react-dom": "^16.8.5",
-    "react": "^16.8.5"
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -19,9 +21,9 @@
     "extends": "react-app"
   },
   "browserslist": [
-    "not op_mini all",
-    "not ie < 10",
+    ">0.2%",
     "not dead",
-    ">0.2%"
+    "not ie < 10",
+    "not op_mini all"
   ]
 }
