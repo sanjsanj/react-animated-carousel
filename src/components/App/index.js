@@ -22,11 +22,19 @@ class App extends React.Component {
 
     const settings = {
       onEdge: e => e === "left" && sliderRef.slickGoTo(0),
-      slidesToShow: 1.3,
+      slidesToShow: 3.4,
       slidesToScroll: 1,
       initialSlide: 0,
       infinite: false,
       dots: false,
+      responsive: [
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1.3,
+          },
+        },
+      ],
     };
 
     const prev = () => {
@@ -49,6 +57,7 @@ class App extends React.Component {
           <button className="button" onClick={prev}>
             Previous
           </button>
+
           <button className="button" onClick={next}>
             Next
           </button>
