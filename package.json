@@ -1,0 +1,27 @@
+{
+  "name": "react-animated-carousel",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react-scripts": "2.1.8",
+    "react-slick": "^0.23.2",
+    "react-spring": "^8.0.18",
+    "react-dom": "^16.8.5",
+    "react": "^16.8.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    "not op_mini all",
+    "not ie < 10",
+    "not dead",
+    ">0.2%"
+  ]
+}
